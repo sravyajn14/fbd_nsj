@@ -1,0 +1,32 @@
+zip.py
+
+This file contains code to display these contents : contains a calculated running median, total dollar amount and total number of contributions by recipient and zip code
+
+First I read input file and then split into words to get recipent of the contribution (CMTE_ID),first five numbers of zipcode, total dollar amounts. I created a  a dictionary of lists to store key as zipcode and list of values of amount recieved by recipent.Then I calculated running median for each key by passing the list to the function.
+
+running median algorithm:
+Step 1: Add next item to one of the heaps
+
+   if next item is smaller than maxHeap root add it to maxHeap,
+   else add it to minHeap
+
+Step 2: Balance the heaps (after this step heaps will be either balanced or
+   one of them will contain 1 more item)
+
+   if number of elements in one of the heaps is greater than the other by
+   more than 1, remove the root element from the one containing more elements and
+   add to the other one
+Then at any given time you can calculate median like this:
+
+   If the heaps contain equal amount of elements;
+     median = (root of maxHeap + root of minHeap)/2
+   Else
+     median = root of the heap with more elements
+
+Date.py:
+
+This file contains code to display these contents : contains a calculated running median, total dollar amount and total number of contributions by recipient and zip code
+
+First I read input file and then split into words to get recipent of the contribution (CMTE_ID),date, amount recieved by the recipent. I created a  a dictionary of lists to store key as zipcode and list of values of amount recieved by recipent.Then I calculated running median for each key by passing the list to the function.I took two more dictionaries to store values and to print to output file.One dictionary to store the CMTE_ID with key as date and second dictionary to store median with key as date
+
+Note: To avoid uploading problems i removed itcont.txt original big file size of 800mb
